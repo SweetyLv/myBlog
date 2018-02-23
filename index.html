@@ -169,122 +169,43 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/22/nodejs/">NodeJs项目部署于linux平台</a>
+      <a class="article-title" href="/2018/02/23/nodejs/">NodeJs项目部署于linux平台</a>
     </h1>
   
 
         
-        <a href="/2018/02/22/nodejs/" class="archive-article-date">
-  	<time datetime="2018-02-22T04:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
+        <a href="/2018/02/23/nodejs/" class="archive-article-date">
+  	<time datetime="2018-02-23T04:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="linux部署过程"><a href="#linux部署过程" class="headerlink" title="linux部署过程"></a>linux部署过程</h2><h1 id="whereis-node-执行路径"><a href="#whereis-node-执行路径" class="headerlink" title="whereis node 执行路径"></a>whereis node 执行路径</h1><p>node: /usr/local/bin/node /opt/node/bin/node</p>
+        <h3 id="node-js项目部署到云服务的过程的感受"><a href="#node-js项目部署到云服务的过程的感受" class="headerlink" title="node.js项目部署到云服务的过程的感受"></a>node.js项目部署到云服务的过程的感受</h3><p>node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。<br>云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队的协同作用。<br>我觉得阿里云确实是不错的选择，他们的运维客服也相当尽职尽责，辛苦了，有他们辛勤的付出，才能让用户更加舒心。在使用云服务过程中，虽然自己是顾客，但是与他们沟通，更觉得自己是他们的同事，毕竟都是一个行业的，只不过角色不同而已，因此能更融洽的沟通和处理。</p>
+<h3 id="安装node-js以及安装相关的框架插件等。"><a href="#安装node-js以及安装相关的框架插件等。" class="headerlink" title="安装node.js以及安装相关的框架插件等。"></a>安装node.js以及安装相关的框架插件等。</h3><ul>
+<li>安装基于Node.js平台的web应用开发框架express在node目录下<br>参考：<a href="http://cnodejs.org/topic/548e552757fd3ae46b233503" target="_blank" rel="noopener">http://cnodejs.org/topic/548e552757fd3ae46b233503</a></li>
+<li>前端模板引擎swig的安装参考指引：<a href="https://www.cnblogs.com/godcity/p/5593295.html" target="_blank" rel="noopener">https://www.cnblogs.com/godcity/p/5593295.html</a></li>
+<li><p>在node.js平台中使用的对mongodb进行建模的工具mongoose,参考：<a href="http://blog.csdn.net/meegomeego/article/details/38231941" target="_blank" rel="noopener">http://blog.csdn.net/meegomeego/article/details/38231941</a></p>
+</li>
+<li><p>mongodb可视化工具推荐RoboMongo：<a href="https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+</li>
+<li><p>关于api-ms-win-crt-runtimel1-1-0.dll缺失的解决方案：<a href="http://blog.csdn.net/huqiao1206/article/details/50768481" target="_blank" rel="noopener">http://blog.csdn.net/huqiao1206/article/details/50768481</a></p>
+</li>
+</ul>
+<h3 id="linux系统部署过程"><a href="#linux系统部署过程" class="headerlink" title="linux系统部署过程"></a>linux系统部署过程</h3><h1 id="whereis-node-执行路径"><a href="#whereis-node-执行路径" class="headerlink" title="whereis node 执行路径"></a>whereis node 执行路径</h1><p>node: /usr/local/bin/node /opt/node/bin/node</p>
 <ul>
 <li>express npm  pm2文件存放路径<br>/opt/node/lib/node_modules/</li>
 <li>express generator<br>/opt/node/bin/express -&gt; /opt/node/lib/node_modules/express-generator/bin/express<br>/opt/node/lib</li>
-</ul>
-<h2 id="node-js-express个人博客项目部署到云服务"><a href="#node-js-express个人博客项目部署到云服务" class="headerlink" title="node.js + express个人博客项目部署到云服务"></a>node.js + express个人博客项目部署到云服务</h2><ul>
-<li>安装基于Node.js平台的web应用开发框架express在node目录下<br>参考：<a href="http://cnodejs.org/topic/548e552757fd3ae46b233503" target="_blank" rel="noopener">http://cnodejs.org/topic/548e552757fd3ae46b233503</a></li>
-<li>前端模板引擎swig的安装参考指引：<a href="https://www.cnblogs.com/godcity/p/5593295.html" target="_blank" rel="noopener">https://www.cnblogs.com/godcity/p/5593295.html</a></li>
-<li>在node.js平台中使用的对mongodb进行建模的工具mongoose,参考：<a href="http://blog.csdn.net/meegomeego/article/details/38231941" target="_blank" rel="noopener">http://blog.csdn.net/meegomeego/article/details/38231941</a></li>
-<li>mongodb可视化工具推荐RoboMongo：<a href="https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral</a></li>
-<li>关于api-ms-win-crt-runtimel1-1-0.dll缺失的解决方案：<a href="http://blog.csdn.net/huqiao1206/article/details/50768481" target="_blank" rel="noopener">http://blog.csdn.net/huqiao1206/article/details/50768481</a></li>
-<li>安装node.js时记得修改系统变量参数的参考：<a href="https://www.cnblogs.com/learnings/p/7372718.html" target="_blank" rel="noopener">https://www.cnblogs.com/learnings/p/7372718.html</a></li>
-<li><blockquote>
-<p><a href="http://blog.csdn.net/chenlinIT/article/details/73343793" target="_blank" rel="noopener">node.js项目部署到云服务</a></p>
+<li>node.js pm2的应用<br>很实用的pm2参考：<a href="https://www.linuxprobe.com/nodejs-pm2-sample.html" target="_blank" rel="noopener">https://www.linuxprobe.com/nodejs-pm2-sample.html</a><blockquote>
+<p>cd Blog2<br>home/blog2<br>pm2 start app.js<br>[pm2]Done.</p>
 </blockquote>
 </li>
-<li><blockquote>
-<p><a href="http://blog.csdn.net/moumaobuchiyu/article/details/55004430" target="_blank" rel="noopener">node.js部署到阿里云全过程</a></p>
-</blockquote>
+<li>mongodb安装和启动配置<br>参考文献：<a href="https://www.cnblogs.com/xiaoqian1993/p/5936648.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaoqian1993/p/5936648.html</a><br>mongodb: /usr/local/mongodb/</li>
+<li><p>mongodb启动成功设置端口<br>参考文献：<a href="http://www.jb51.net/article/63552.htm" target="_blank" rel="noopener">http://www.jb51.net/article/63552.htm</a></p>
 </li>
-<li><blockquote>
-<p><a href="https://jingyan.baidu.com/album/75ab0bcbc40b39d6864db23c.html?picindex=2" target="_blank" rel="noopener">xshell登陆云服务</a></p>
-</blockquote>
+<li><p>更多相关的node.js的学习笔记，已记录在我的github中:<a href="https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/node_learning_mark.md" target="_blank" rel="noopener">https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/node_learning_mark.md</a></p>
 </li>
-<li><blockquote>
-<p><a href="http://blog.csdn.net/u013263917/article/details/79037770" target="_blank" rel="noopener">部署项目完整版</a></p>
-</blockquote>
-</li>
-</ul>
-<h2 id="website"><a href="#website" class="headerlink" title="website"></a>website</h2><p><em><a href="http://blog.csdn.net/slwbcsdn/article/details/53458352" target="_blank" rel="noopener">三分钟了解json</a>
-</em>[nodejs前端模板引擎swig入门]0(<a href="https://www.jianshu.com/p/f0bffc42c1ce" target="_blank" rel="noopener">https://www.jianshu.com/p/f0bffc42c1ce</a>)<br>*<a href="https://www.mongodb.com" target="_blank" rel="noopener">mongodb</a></p>
-<h2 id="数据库相关：mongoDB-amp-mysql等"><a href="#数据库相关：mongoDB-amp-mysql等" class="headerlink" title="数据库相关：mongoDB &amp; mysql等"></a>数据库相关：mongoDB &amp; mysql等</h2><ul>
-<li>win+R  -&gt; CMD里面 打开存放mongo.exe的安装路径，如：c:> cd MongoDb\Server\3.6\bin, 在该目录下，输入数据库的存储路径，以及端口，设置后回车。</li>
-<li>命令方式连接mongo：数据库存储的路径命令：mongod –dbpath=E:\nodeJs\Blog2\db port=27018</li>
-<li>工具方式连接mongo:Robomongo 0.9.0-RC7</li>
-<li><a href="http://mongoosejs.com/" target="_blank" rel="noopener">mongoose操作数据库文档</a></li>
-<li>连接数据库，mongoose.connect(‘mongdb://localhost:27018/blog’,function(){}); 其中，connect(协议://)，这里利用的协议为mongdb协议，后面的function(){}为回调函数。</li>
-<li>安装swig模板，在项目根目录下，通过npm安装：npm i -S swig</li>
-<li>安装express-mongoose,需要在项目根目录下运行命令：npm install express-mongoose –save</li>
-<li><a href="http://yunkus.com/mongoose-install-config/" target="_blank" rel="noopener">mongoose 安装及配置</a></li>
-<li>安装mongoose,需要在项目根目录下运行命令：npm install mongoose –save</li>
-<li><a href="https://zhidao.baidu.com/question/1863152252753215947.html" target="_blank" rel="noopener">形象描述schema与database等的区别</a></li>
-</ul>
-<h2 id="demo-page"><a href="#demo-page" class="headerlink" title="demo page"></a>demo page</h2><ul>
-<li><a href="https://segmentfault.com/a/1190000008278925" target="_blank" rel="noopener">demo_teaching canvas</a></li>
-<li><a href="https://demo.luckyw.cn/" target="_blank" rel="noopener">demo_code</a></li>
-</ul>
-<h2 id="疑难问题"><a href="#疑难问题" class="headerlink" title="疑难问题"></a>疑难问题</h2><ul>
-<li><a href="http://cnodejs.org/topic/5231a630101e574521e45ef8" target="_blank" rel="noopener">experts和module.exports的区别</a></li>
-</ul>
-<h2 id="cmd命令"><a href="#cmd命令" class="headerlink" title="cmd命令"></a>cmd命令</h2><ul>
-<li>node路径：where node</li>
-<li>注释：$为指令符号，输入指令时不需要写$此符号</li>
-<li>cd ..  返回上一层目录</li>
-<li>cd \ 返回根目录</li>
-<li>d: 打开d盘</li>
-<li>npm -v  看npm版本</li>
-<li>node -v 看node版本</li>
-<li>npm install npm -g 通过npm命令升级为npm的新版本for Windows</li>
-<li>npm install <module name="">  通过npm安装Node.js模块语法。<br>例如  Node.js web框架模块 express。则表达为：  npm install express<br>安装好之后，express 包就放在了工程目录下的 node_modules 目录中，因此在代码中只需要通过 require(‘express’) 的方式就好，无需指定第三方包路径。<br>例如：var express = require(‘express’);</module></li>
-<li>npm list -g  查看所有全局安装的模块</li>
-<li>npm iist grunt  查看某个模块的版本号</li>
-<li>npm uninstall express   卸载 Node.js 模块</li>
-<li>npm ls  你可以到 /node_modules/ 目录下查看包是否还存在，或者使用该命令查看</li>
-<li>npm update express   更新模块</li>
-<li>npm search express   搜索模块</li>
-<li>创建模块，package.json 文件是必不可少的。我们可以使用 NPM 生成 package.json 文件，生成的文件包含了基本的结果。<br>npm init</li>
-<li>在 npm 资源库中注册用户（使用邮箱注册）<br>npm adduser<br>Username: mcmohd<br>Password:<br>Email: (this IS public) mcmohd@gmail.com</li>
-<li>npm publish  发布模块</li>
-<li>NPM提供了很多命令，例如install和publish，使用npm help可查看所有命令。</li>
-<li>使用npm help <command>可查看某条命令的详细帮助，例如npm help install。</li>
-<li>在package.json所在目录下使用npm install . -g可先在本地安装当前命令行程序，可用于发布前的本地测试。</li>
-<li>使用npm update <package>可以把当前目录下node_modules子目录里边的对应模块更新至最新版本。</package></li>
-<li>使用npm update <package> -g可以把全局安装的对应命令行程序更新至最新版。</package></li>
-<li>使用npm cache clear可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人。</li>
-<li><p>使用npm unpublish <package>@<version>可以撤销发布自己发布过的某个版本代码。</version></package></p>
-<h2 id="Node-js-REPL-交互式解释器"><a href="#Node-js-REPL-交互式解释器" class="headerlink" title="Node.js REPL(交互式解释器)"></a>Node.js REPL(交互式解释器)</h2></li>
-<li>Node.js REPL(Read Eval Print Loop:交互式解释器) 表示一个电脑的环境，类似 Window 系统的终端或 Unix/Linux shell，我们可以在终端中输入命令，并接收系统的响应。</li>
-<li>Node 自带了交互式解释器，可以执行以下任务：</li>
-<li>读取 - 读取用户输入，解析输入了Javascript 数据结构并存储在内存中。</li>
-<li>执行 - 执行输入的数据结构</li>
-<li>打印 - 输出结果</li>
-<li>循环 - 循环操作以上步骤直到用户两次按下 ctrl-c 按钮退出</li>
-<li>启动node的终端指令  $ node</li>
-<li>下划线(_)获取表达式的运算结果：<a href="http://www.runoob.com/nodejs/nodejs-repl.html" target="_blank" rel="noopener">具体案例</a></li>
-<li>REPL 命令</li>
-<li>ctrl + c - 退出当前终端。</li>
-<li>ctrl + c 按下两次 - 退出 Node REPL。</li>
-<li>ctrl + d - 退出 Node REPL.</li>
-<li>向上/向下 键 - 查看输入的历史命令</li>
-<li>tab 键 - 列出当前命令</li>
-<li>.help - 列出使用命令</li>
-<li>.break - 退出多行表达式</li>
-<li>.clear - 退出多行表达式</li>
-<li>.save filename - 保存当前的 Node REPL 会话到指定文件</li>
-<li>.load filename - 载入当前 Node REPL 会话的文件内容。</li>
-</ul>
-<p>Node.js 回调函数(期待11.23)</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
-<li>flags 可以是：</li>
-<li>‘r’ - 以读取模式打开文件。如果文件不存在则发生异常。</li>
-<li>‘r+’ - 以读写模式打开文件。如果文件不存在则发生异常。</li>
-<li>‘rs+’ - 以同步读写模式打开文件。命令操作系统绕过本地文件系统缓存。</li>
 </ul>
 
       
@@ -298,86 +219,10 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/22/nodejs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-about_hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/12/about_hexo/">yilia主题的日常维护</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/12/about_hexo/" class="archive-article-date">
-  	<time datetime="2018-02-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="使用yilia主题遇到的一些问题解决办法"><a href="#使用yilia主题遇到的一些问题解决办法" class="headerlink" title="使用yilia主题遇到的一些问题解决办法"></a>使用yilia主题遇到的一些问题解决办法</h3><p>先将在编辑过程中遇到的问题参考资料记录在此，日后有时间在编写成博文<br>
-        
-          <a class="article-more-a" href="/2018/02/12/about_hexo/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
@@ -389,7 +234,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/12/about_hexo/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/02/23/nodejs/">展开全文 >></a>
         </p>
       
 
@@ -426,7 +271,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/11/bulid_hexo/">hexo 建站过程</a>
+      <a class="article-title" href="/2018/02/11/bulid_hexo/">github pages &amp; hexo</a>
     </h1>
   
 
@@ -439,7 +284,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 非常开心经过努力独立完成了整个博客流程<br> 先暂时将自己建站过程中遇到的坑和参考资料记录下来，抽空写成经验分享给各位。<br>
+        <p>之前工作忙碌，一直没有时间弄自己的博客，只在写博客的平台上，零星的记录了平常的学习笔记。趁着现在工作有空闲些，弄了一下自己的博客GithubPages + Hexo。在此，也用node.js跟着教程做了一个express框架的博客项目，更深入的熟悉node.js。在这个过程中，不仅接触熟悉了解node.js，而且还接触到了linux系统,pm2命令等之前没有了解的领域，这次的部署，可谓获益良多。也让自己深深爱上了linux系统、node.js这些纯命令式的做法，实现一种人机对话，在这个过程中，有很多坑不断出现，不断去填平。功夫不负有心人，成功的喜悦无疑很开心。<br> 有点小激动！非常开心经过努力独立完成了整个博客流程。<br> 将此次的经验分享于此，希望大家在部署过程中能够少走些坑。<br> 备注：win系统作为背景记录。<br>
         
           <a class="article-more-a" href="/2018/02/11/bulid_hexo/#more">more >></a>
         
@@ -455,11 +300,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -555,11 +400,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -694,11 +539,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

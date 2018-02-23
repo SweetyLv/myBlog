@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>github pages &amp; hexo | sweetylv博客</title>
+  <title>NodeJs项目部署于linux平台 | sweetylv博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前工作忙碌，一直没有时间弄自己的博客，只在写博客的平台上，零星的记录了平常的学习笔记。趁着现在工作有空闲些，弄了一下自己的博客GithubPages + Hexo。在此，也用node.js跟着教程做了一个express框架的博客项目，更深入的熟悉node.js。在这个过程中，不仅接触熟悉了解node.js，而且还接触到了linux系统,pm2命令等之前没有了解的领域，这次的部署，可谓获益良多。也">
+  <meta name="description" content="node.js项目部署到云服务的过程的感受node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队">
 <meta name="keywords" content="blog,随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github pages &amp; hexo">
-<meta property="og:url" content="http://yoursite.com/2018/02/11/bulid_hexo/index.html">
+<meta property="og:title" content="NodeJs项目部署于linux平台">
+<meta property="og:url" content="http://yoursite.com/2018/02/23/nodejs/index.html">
 <meta property="og:site_name" content="sweetylv博客">
-<meta property="og:description" content="之前工作忙碌，一直没有时间弄自己的博客，只在写博客的平台上，零星的记录了平常的学习笔记。趁着现在工作有空闲些，弄了一下自己的博客GithubPages + Hexo。在此，也用node.js跟着教程做了一个express框架的博客项目，更深入的熟悉node.js。在这个过程中，不仅接触熟悉了解node.js，而且还接触到了linux系统,pm2命令等之前没有了解的领域，这次的部署，可谓获益良多。也">
-<meta property="og:updated_time" content="2018-02-23T06:36:40.455Z">
+<meta property="og:description" content="node.js项目部署到云服务的过程的感受node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队">
+<meta property="og:updated_time" content="2018-02-23T07:08:17.077Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github pages &amp; hexo">
-<meta name="twitter:description" content="之前工作忙碌，一直没有时间弄自己的博客，只在写博客的平台上，零星的记录了平常的学习笔记。趁着现在工作有空闲些，弄了一下自己的博客GithubPages + Hexo。在此，也用node.js跟着教程做了一个express框架的博客项目，更深入的熟悉node.js。在这个过程中，不仅接触熟悉了解node.js，而且还接触到了linux系统,pm2命令等之前没有了解的领域，这次的部署，可谓获益良多。也">
+<meta name="twitter:title" content="NodeJs项目部署于linux平台">
+<meta name="twitter:description" content="node.js项目部署到云服务的过程的感受node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队">
   
     <link rel="alternative" href="/atom.xml" title="sweetylv博客" type="application/atom+xml">
   
@@ -165,85 +165,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-bulid_hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-nodejs" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      github pages &amp; hexo
+      NodeJs项目部署于linux平台
     </h1>
   
 
         
-        <a href="/2018/02/11/bulid_hexo/" class="archive-article-date">
-  	<time datetime="2018-02-11T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-11</time>
+        <a href="/2018/02/23/nodejs/" class="archive-article-date">
+  	<time datetime="2018-02-23T04:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前工作忙碌，一直没有时间弄自己的博客，只在写博客的平台上，零星的记录了平常的学习笔记。趁着现在工作有空闲些，弄了一下自己的博客GithubPages + Hexo。在此，也用node.js跟着教程做了一个express框架的博客项目，更深入的熟悉node.js。在这个过程中，不仅接触熟悉了解node.js，而且还接触到了linux系统,pm2命令等之前没有了解的领域，这次的部署，可谓获益良多。也让自己深深爱上了linux系统、node.js这些纯命令式的做法，实现一种人机对话，在这个过程中，有很多坑不断出现，不断去填平。功夫不负有心人，成功的喜悦无疑很开心。<br> 有点小激动！非常开心经过努力独立完成了整个博客流程。<br> 将此次的经验分享于此，希望大家在部署过程中能够少走些坑。<br> 备注：win系统作为背景记录。<br><a id="more"></a><br>搭建环境准备</p>
-<ul>
-<li>Node.js 的安装和准备</li>
-<li>git的安装和准备</li>
-<li>gitHub账户的配置</li>
+        <h3 id="node-js项目部署到云服务的过程的感受"><a href="#node-js项目部署到云服务的过程的感受" class="headerlink" title="node.js项目部署到云服务的过程的感受"></a>node.js项目部署到云服务的过程的感受</h3><p>node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。<br>云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队的协同作用。<br>我觉得阿里云确实是不错的选择，他们的运维客服也相当尽职尽责，辛苦了，有他们辛勤的付出，才能让用户更加舒心。在使用云服务过程中，虽然自己是顾客，但是与他们沟通，更觉得自己是他们的同事，毕竟都是一个行业的，只不过角色不同而已，因此能更融洽的沟通和处理。</p>
+<h3 id="安装node-js以及安装相关的框架插件等。"><a href="#安装node-js以及安装相关的框架插件等。" class="headerlink" title="安装node.js以及安装相关的框架插件等。"></a>安装node.js以及安装相关的框架插件等。</h3><ul>
+<li>安装基于Node.js平台的web应用开发框架express在node目录下<br>参考：<a href="http://cnodejs.org/topic/548e552757fd3ae46b233503" target="_blank" rel="noopener">http://cnodejs.org/topic/548e552757fd3ae46b233503</a></li>
+<li>前端模板引擎swig的安装参考指引：<a href="https://www.cnblogs.com/godcity/p/5593295.html" target="_blank" rel="noopener">https://www.cnblogs.com/godcity/p/5593295.html</a></li>
+<li><p>在node.js平台中使用的对mongodb进行建模的工具mongoose,参考：<a href="http://blog.csdn.net/meegomeego/article/details/38231941" target="_blank" rel="noopener">http://blog.csdn.net/meegomeego/article/details/38231941</a></p>
+</li>
+<li><p>mongodb可视化工具推荐RoboMongo：<a href="https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+</li>
+<li><p>关于api-ms-win-crt-runtimel1-1-0.dll缺失的解决方案：<a href="http://blog.csdn.net/huqiao1206/article/details/50768481" target="_blank" rel="noopener">http://blog.csdn.net/huqiao1206/article/details/50768481</a></p>
+</li>
 </ul>
-<h3 id="配置Node-js准备环境"><a href="#配置Node-js准备环境" class="headerlink" title="配置Node.js准备环境"></a>配置Node.js准备环境</h3><p>安装完成node.js后，cmd命令查看是否正确</p>
-<blockquote>
-<p>node -v<br>npm -v<br>结果显示了版本号，证明已经安装成功 node.js 和 npm</p>
+<h3 id="linux系统部署过程"><a href="#linux系统部署过程" class="headerlink" title="linux系统部署过程"></a>linux系统部署过程</h3><h1 id="whereis-node-执行路径"><a href="#whereis-node-执行路径" class="headerlink" title="whereis node 执行路径"></a>whereis node 执行路径</h1><p>node: /usr/local/bin/node /opt/node/bin/node</p>
+<ul>
+<li>express npm  pm2文件存放路径<br>/opt/node/lib/node_modules/</li>
+<li>express generator<br>/opt/node/bin/express -&gt; /opt/node/lib/node_modules/express-generator/bin/express<br>/opt/node/lib</li>
+<li>node.js pm2的应用<br>很实用的pm2参考：<a href="https://www.linuxprobe.com/nodejs-pm2-sample.html" target="_blank" rel="noopener">https://www.linuxprobe.com/nodejs-pm2-sample.html</a><blockquote>
+<p>cd Blog2<br>home/blog2<br>pm2 start app.js<br>[pm2]Done.</p>
 </blockquote>
-<h3 id="配置Git环境"><a href="#配置Git环境" class="headerlink" title="配置Git环境"></a>配置Git环境</h3><p>在git官网<a href="https://git-scm.com/downloads下载安装程序。" target="_blank" rel="noopener">https://git-scm.com/downloads下载安装程序。</a><br>安装过程和node.js基本一致，都是默认安装，在选择git path时候，建议选择“use git from the windows command prompt”，将会使得Git安装程序在系统PATH中加入Git的相关路径，使得你可以在CMD界面下调用Git，不用打开Git Bash了。<br>然后在cmd界面上，输入</p>
-<blockquote>
-<p>git –version<br>结果显示了版本号，证明已经安装成功。<br>关于git的下载和安装，可以参考资料：<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53573286" target="_blank" rel="noopener">http://blog.csdn.net/gdutxiaoxu/article/details/53573286</a></p>
-</blockquote>
-<h3 id="github账户的注册和配置"><a href="#github账户的注册和配置" class="headerlink" title="github账户的注册和配置"></a>github账户的注册和配置</h3><p>有账号的直接在账号中创建新仓库New repository，然后在settings开启githubpages功能<br>参考资料：<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018。" target="_blank" rel="noopener">http://blog.csdn.net/gdutxiaoxu/article/details/53576018。</a></p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>这里有个坑，当时我被重重的坑了许久才填平，记住需要在管理员cmd窗口下执行。<br>打开管理员窗口，win7系统在单击开始输入“命令提示符”<br>找到适合自己的地方，新建文件夹，例如以“e:/hexo”为例，说明如下命令</p>
-<blockquote>
-<p>e:<br>cd hexo<br>npm install hexo-cli -g<br>结果你可能看到warn，不要紧，继续输入命令<br>npm install hexo –save<br>检查是否已经安装成功<br>hexo -v<br>结果显示版本号，则表明已经安装成功</p>
-</blockquote>
-<h3 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h3><p>紧接着上面的路径e:\hexo,继续进行hexo的配置</p>
-<blockquote>
-<p>hexo init<br>npm install<br>hexo g<br>hexo s<br>则可以在本地查看<a href="http://localhost:4000/，本地的hexo配置已成功。" target="_blank" rel="noopener">http://localhost:4000/，本地的hexo配置已成功。</a></p>
-</blockquote>
-<h3 id="将本地和git相关联的配置"><a href="#将本地和git相关联的配置" class="headerlink" title="将本地和git相关联的配置"></a>将本地和git相关联的配置</h3><p>配置个人信息</p>
-<blockquote>
-<p>git config –global user.name “你的账号ll”<br>git config –global user.email “你的邮箱ll@qq.com”<br>紧接着生成密钥<br>ssh-keygen -t rsa -C “你的邮箱ll@qq.com”<br>默认路径为C:\Users\用户名\ssh<br>这个密钥可参考一下下面的参考资料</p>
-</blockquote>
-<h3 id="配置deployment"><a href="#配置deployment" class="headerlink" title="配置deployment"></a>配置deployment</h3><p>在文件夹中找到_config.yml，找到Deployment,根据下面配置<br>deploy:<br>  type: git<br>  repo: git@github.com:yourname/yourname.github.io.git<br>  branch: master<br>上面有个经常出错的坑，“：”冒号后面必须有个空格，这是githubpages严格的格式。</p>
-<p>上述成功后，则可以发布文章了。<br>文章路径：source_posts,用md记录的。</p>
-<blockquote>
-<p>hexo g<br>hexo d<br>部署成功后，就能访问你的地址：<a href="https://yourName.github.io（例如我的地址：https://sweetylv.github.io）" target="_blank" rel="noopener">https://yourName.github.io（例如我的地址：https://sweetylv.github.io）</a></p>
-</blockquote>
-<h3 id="发布成功换主题"><a href="#发布成功换主题" class="headerlink" title="发布成功换主题"></a>发布成功换主题</h3><p>当然，很多人发布成功后，都会找适合自己的主题进行修改。<br>推荐参考：<a href="https://www.jianshu.com/p/f389ad8c49bd" target="_blank" rel="noopener">https://www.jianshu.com/p/f389ad8c49bd</a><br>1 发表的文章很长的时候或者首页展示的文章只是一部分，可以用隐藏。 叹号注释more</p>
-<p>2、流量设置：<br>方法一：在\themes\yilia\layout_partial\footer.ejs下便签前添加如下代码：<br>“不蒜子”的方法</p>
-<p><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>本站总访问量 <span id="busuanzi_value_site_pv"></span>次&amp;nbsp&amp;nbsp&amp;nbsp本站访客数<span id="busuanzi_value_site_uv"></span>人次<br>参考：<a href="https://www.jianshu.com/p/702a7aec4d00" target="_blank" rel="noopener">https://www.jianshu.com/p/702a7aec4d00</a></p>
-<p>也可以使用“LeanCloud”计算更详尽的信息，<a href="https://www.jianshu.com/p/702a7aec4d00" target="_blank" rel="noopener">详情参考</a></p>
-<p>3、<br>更多关于主题的设置：<a href="http://www.54tianzhisheng.cn/2017/06/13/Hexo-yilia-toc/" target="_blank" rel="noopener">http://www.54tianzhisheng.cn/2017/06/13/Hexo-yilia-toc/</a></p>
-<p>目录、随笔等：<a href="http://www.54tianzhisheng.cn/2017/12/18/hexo-yilia/" target="_blank" rel="noopener">http://www.54tianzhisheng.cn/2017/12/18/hexo-yilia/</a></p>
-<p>头像等：<a href="http://blog.csdn.net/v123411739/article/details/45227249" target="_blank" rel="noopener">http://blog.csdn.net/v123411739/article/details/45227249</a></p>
-<p><a href="https://www.jianshu.com/p/1fb65c61fa4a" target="_blank" rel="noopener">https://www.jianshu.com/p/1fb65c61fa4a</a></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
-<p>下面是安装中的坑以及相关的主题配置的参考资料：<br>安装步骤详解：<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">http://blog.csdn.net/gdutxiaoxu/article/details/53576018</a></p>
-<p>管理员命令：<a href="https://jingyan.baidu.com/article/fb48e8be1b785d6e622e1495.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/fb48e8be1b785d6e622e1495.html</a></p>
-<p>密钥参考：<a href="https://www.cnblogs.com/luckyXcc/p/5876651.html" target="_blank" rel="noopener">https://www.cnblogs.com/luckyXcc/p/5876651.html</a></p>
-<p>npm install 报错-4048：<a href="http://blog.csdn.net/letasian/article/details/77987043" target="_blank" rel="noopener">http://blog.csdn.net/letasian/article/details/77987043</a></p>
-<p>hexo步骤流程：<a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">http://blog.csdn.net/gdutxiaoxu/article/details/53576018</a></p>
-<p>搭建博客：<a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more%EF%BC%89" target="_blank" rel="noopener">http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more%EF%BC%89</a></p>
-<p>本地运行hexo:<a href="http://blog.csdn.net/qq_27093465/article/details/72957030" target="_blank" rel="noopener">http://blog.csdn.net/qq_27093465/article/details/72957030</a></p>
-<p>主题库：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-<p>主题更换：<a href="http://blog.csdn.net/arvin0/article/details/71338651" target="_blank" rel="noopener">http://blog.csdn.net/arvin0/article/details/71338651</a></p>
-<p>写作命令信息：<a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/writing.html</a></p>
-<p>参考博客：<a href="http://www.54tianzhisheng.cn/" target="_blank" rel="noopener">http://www.54tianzhisheng.cn/</a></p>
-<p>markdown语法：<a href="http://blog.csdn.net/chwshuang/article/details/52350551" target="_blank" rel="noopener">http://blog.csdn.net/chwshuang/article/details/52350551</a></p>
-<p>markdown让语法书写更优美：<a href="https://www.jianshu.com/p/17fdcf17bbb4" target="_blank" rel="noopener">https://www.jianshu.com/p/17fdcf17bbb4</a></p>
-<p>md语法说明详解：<a href="http://wowubuntu.com/markdown/index.html" target="_blank" rel="noopener">http://wowubuntu.com/markdown/index.html</a></p>
-<p>改名：theme: yilia</p>
-<p>git not found错误：<br>在git里执行命令 npm i hexo-generator-json-content –save</p>
-<p>输入：$ hexo d 出现ERROR Deployer not found: git：<br>解决方案：<br>输入命令安装扩展：npm install –save hexo-deployer-git</p>
-<p>yilia主题相关设置:<a href="https://www.jianshu.com/p/f389ad8c49bd" target="_blank" rel="noopener">https://www.jianshu.com/p/f389ad8c49bd</a></p>
+</li>
+<li>mongodb安装和启动配置<br>参考文献：<a href="https://www.cnblogs.com/xiaoqian1993/p/5936648.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaoqian1993/p/5936648.html</a><br>mongodb: /usr/local/mongodb/</li>
+<li><p>mongodb启动成功设置端口<br>参考文献：<a href="http://www.jb51.net/article/63552.htm" target="_blank" rel="noopener">http://www.jb51.net/article/63552.htm</a></p>
+</li>
+<li><p>更多相关的node.js的学习笔记，已记录在我的github中:<a href="https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/node_learning_mark.md" target="_blank" rel="noopener">https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/node_learning_mark.md</a></p>
+</li>
+</ul>
 
       
 
@@ -338,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/11/bulid_hexo/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/23/nodejs/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -352,18 +318,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/02/23/nodejs/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          NodeJs项目部署于linux平台
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/11/sweetylv/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Welcome to Sweetylv&#39;s blog</div>
+    <a href="/2018/02/11/bulid_hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">github pages &amp; hexo</div>
       <i class="icon-circle-right"></i>
     </a>
   
