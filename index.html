@@ -182,32 +182,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="node-js项目部署到云服务的过程的感受"><a href="#node-js项目部署到云服务的过程的感受" class="headerlink" title="node.js项目部署到云服务的过程的感受"></a>node.js项目部署到云服务的过程的感受</h3><p>node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。<br>云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队的协同作用。<br>我觉得阿里云确实是不错的选择，他们的运维客服也相当尽职尽责，辛苦了，有他们辛勤的付出，才能让用户更加舒心。在使用云服务过程中，虽然自己是顾客，但是与他们沟通，更觉得自己是他们的同事，毕竟都是一个行业的，只不过角色不同而已，因此能更融洽的沟通和处理。</p>
-<h3 id="安装node-js以及安装相关的框架插件等。"><a href="#安装node-js以及安装相关的框架插件等。" class="headerlink" title="安装node.js以及安装相关的框架插件等。"></a>安装node.js以及安装相关的框架插件等。</h3><ul>
-<li>安装基于Node.js平台的web应用开发框架express在node目录下<br>参考：<a href="http://cnodejs.org/topic/548e552757fd3ae46b233503" target="_blank" rel="noopener">http://cnodejs.org/topic/548e552757fd3ae46b233503</a></li>
-<li>前端模板引擎swig的安装参考指引：<a href="https://www.cnblogs.com/godcity/p/5593295.html" target="_blank" rel="noopener">https://www.cnblogs.com/godcity/p/5593295.html</a></li>
-<li><p>在node.js平台中使用的对mongodb进行建模的工具mongoose,参考：<a href="http://blog.csdn.net/meegomeego/article/details/38231941" target="_blank" rel="noopener">http://blog.csdn.net/meegomeego/article/details/38231941</a></p>
-</li>
-<li><p>mongodb可视化工具推荐RoboMongo：<a href="https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">https://www.cnblogs.com/duanyue/p/7238406.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
-</li>
-<li><p>关于api-ms-win-crt-runtimel1-1-0.dll缺失的解决方案：<a href="http://blog.csdn.net/huqiao1206/article/details/50768481" target="_blank" rel="noopener">http://blog.csdn.net/huqiao1206/article/details/50768481</a></p>
-</li>
-</ul>
-<h3 id="linux系统部署过程"><a href="#linux系统部署过程" class="headerlink" title="linux系统部署过程"></a>linux系统部署过程</h3><h1 id="whereis-node-执行路径"><a href="#whereis-node-执行路径" class="headerlink" title="whereis node 执行路径"></a>whereis node 执行路径</h1><p>node: /usr/local/bin/node /opt/node/bin/node</p>
-<ul>
-<li>express npm  pm2文件存放路径<br>/opt/node/lib/node_modules/</li>
-<li>express generator<br>/opt/node/bin/express -&gt; /opt/node/lib/node_modules/express-generator/bin/express<br>/opt/node/lib</li>
-<li>node.js pm2的应用<br>很实用的pm2参考：<a href="https://www.linuxprobe.com/nodejs-pm2-sample.html" target="_blank" rel="noopener">https://www.linuxprobe.com/nodejs-pm2-sample.html</a><blockquote>
-<p>cd Blog2<br>home/blog2<br>pm2 start app.js<br>[pm2]Done.</p>
-</blockquote>
-</li>
-<li>mongodb安装和启动配置<br>参考文献：<a href="https://www.cnblogs.com/xiaoqian1993/p/5936648.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaoqian1993/p/5936648.html</a><br>mongodb: /usr/local/mongodb/</li>
-<li><p>mongodb启动成功设置端口<br>参考文献：<a href="http://www.jb51.net/article/63552.htm" target="_blank" rel="noopener">http://www.jb51.net/article/63552.htm</a></p>
-</li>
-<li><p>更多相关的node.js的学习笔记，已记录在我的github中:<a href="https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/node_learning_mark.md" target="_blank" rel="noopener">https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/node_learning_mark.md</a></p>
-</li>
-</ul>
-
+        <h3 id="node-js项目部署到云服务的过程的感受"><a href="#node-js项目部署到云服务的过程的感受" class="headerlink" title="node.js项目部署到云服务的过程的感受"></a>node.js项目部署到云服务的过程的感受</h3><p>node.js+express+mongodb的项目，放到云服务的部署过程，在这个过程中，遇到的问题很多，毕竟之前没有接触过linux系统，幸亏接触起来与node的感觉类似，当然，一开始还是有些不懂，但是只要思路敞开了，顺藤摸瓜一步一步的走，慢慢就能熟能生巧，道理自然是万变不离其中。<br>云服务，也有专门的运维工作，有时候我们也需要他们的帮助，可以类似于一个团队的协同作用。<br>我觉得阿里云确实是不错的选择，他们的运维客服也相当尽职尽责，辛苦了，有他们辛勤的付出，才能让用户更加舒心。在使用云服务过程中，虽然自己是顾客，但是与他们沟通，更觉得自己是他们的同事，毕竟都是一个行业的，只不过角色不同而已，因此能更融洽的沟通和处理。<br>
+        
+          <a class="article-more-a" href="/2018/02/23/nodejs/#more">more >></a>
+        
       
 
       
@@ -364,7 +342,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 先暂时把自己的github一些内容放上去，还没有整理完善。</p>
+        <h3 id="历史回顾"><a href="#历史回顾" class="headerlink" title="历史回顾"></a>历史回顾</h3><ul>
+<li><a href="http://htmlpreview.github.io/?https://github.com/SweetyLv/sweety_projects/blob/master/yichuan/index.html" target="_blank" rel="noopener">第一个全站开发</a></li>
+</ul>
 <h3 id="linux-amp-云服务"><a href="#linux-amp-云服务" class="headerlink" title="linux &amp; 云服务"></a>linux &amp; 云服务</h3><ul>
 <li><a href="https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/knowlege.md" target="_blank" rel="noopener">自己的阿里云服务器相关部署</a></li>
 <li><a href="https://github.com/SweetyLv/sweety_node_php_knowlege/blob/master/knowlege.md" target="_blank" rel="noopener">linux相关的命令</a></li>
@@ -380,11 +360,7 @@
 </li>
 </ul>
 <h3 id="velocity语法"><a href="#velocity语法" class="headerlink" title="velocity语法"></a>velocity语法</h3><ul>
-<li><a href="https://www.cnblogs.com/sunxun/p/6553122.html" target="_blank" rel="noopener">Velocity !$ 和$!区别</a></li>
-</ul>
-<h3 id="历史回顾"><a href="#历史回顾" class="headerlink" title="历史回顾"></a>历史回顾</h3><ul>
-<li><a href="http://htmlpreview.github.io/?https://github.com/SweetyLv/sweety_projects/blob/master/yichuan/index.html" target="_blank" rel="noopener">第一个全站开发</a></li>
-</ul>
+<li><a href="https://www.cnblogs.com/sunxun/p/6553122.html" target="_blank" rel="noopener">Velocity !$ 和$!区别</a>
         
           <a class="article-more-a" href="/2018/02/11/sweetylv/#more">more >></a>
         
